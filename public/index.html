@@ -1,24 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create User</title>
 </head>
+
 <body>
     <form id="user-create-form" action="./api/user" method="post">
-        Username:<br>
-        <input type="text" name="username" id="newUserName"><br>
-        Email:<br>
-        <input type="text" name="email" id="newEmail"><br>
-        Password:<br>
-        <input type="text" name="password" id="newPassword"><br>
-        Confirm Password:<br>
-        <input type="text" name="confirmPassword" id="newConfirmPassword"><br>
-        
+
+        <fieldset id="yourInfo">
+
+            <legend>Your Information</legend>
+
+            <label for="username">Username:</label>
+            <br>
+            <input type="text" name="username" id="newUserName" autofocus>
+            <br>
+            <br>
+
+            <label for="email">Email:</label>
+            <br>
+            <input type="text" name="email" id="newEmail">
+            <br>
+            <br>
+
+            <label for="phone">Phone:</label>
+            <br>
+            <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
+            <br>
+            <br>
+
+            <label for="socialMedia">Social Media Link:</label>
+            <br>
+            <input type="url" name="url" id="url" placeholder="https://www.disabledfield.com" size="40" disabled>
+
+        </fieldset>
+
+        <fieldset id="methods of comm">
+
+            <legend>Preferred Method Of Communication</legend>
+
+            <div>
+
+                <input type="radio" id="phone" name="comMethod" value="phone">
+                <label for="phone">Phone</label>
+
+                <input type="radio" id="email" name="comMethod" value="email">
+                <label for="email">Email</label>
+
+                <input type="radio" id="cupAndString" name="comMethod" value="cupAndString">
+                <label for="cupAndString">Cup and String</label>
+
+            </div>
+
+        </fieldset>
+
+        <fieldset id="typeOfDevice">
+
+            <legend>What Devices Do You Use?</legend>
+
+            <input type="checkbox" id="iosDevice" name="device" value="iOS">
+            <label for="iosDevice">iOS(iPhone/iPad)</label>
+            <br>
+
+            <input type="checkbox" id="android" name="device" value="android">
+            <label for="android">Android</label>
+            <br>
+
+            <input type="checkbox" id="mac" name="device" value="mac">
+            <label for="mac">Mac</label>
+            <br>
+
+            <input type="checkbox" id="windows" name="device" value="windows">
+            <label for="windows">Windows</label>
+            <br>
+
+            <input type="checkbox" id="chromeOS" name="device" value="chromeOS">
+            <label for="chromeOS">Chrome OS (Chromebook)</label>
+            <br>
+
+            <input type="checkbox" id="linux" name="device" value="linux">
+            <label for="linux">Linux</label>
+            <br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>What Type Of User Are You? (One or more)</legend>
+            <select id="userType" multiple>
+                <option value="">Select</option>
+                <option value="user">User</option>
+                <option value="moderator">Moderator</option>
+                <option value="administrator">Administrator</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>How Spicy Do You Like Your Memes?</legend>
+            <label for="spiciness">Spiciness</label>
+            <br>
+            <input type="range" list="spiciness">
+            <datalist id="spiciness">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+        </fieldset>
         <button type="submit">Create User</button>
+        <button type="reset">Reset</button>
     </form>
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>

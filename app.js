@@ -27,7 +27,6 @@ function randomId() {
    return randomNumb
 }
 
-// add POST request listener here
 app.post("/api/user", function(req,res) {
     if (checkIfUserAlreadyExists(req) === true) {
         console.log("Username Already Exists")
