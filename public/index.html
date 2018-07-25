@@ -17,13 +17,13 @@
 
             <label for="username">Username:</label>
             <br>
-            <input type="text" name="username" id="newUserName" autofocus>
+            <input type="text" name="userName" id="newUserName" autofocus>
             <br>
             <br>
 
             <label for="email">Email:</label>
             <br>
-            <input type="text" name="email" id="newEmail">
+            <input id="emailAddress"  name="emailAddress" type="email" placeholder="example@email.com">
             <br>
             <br>
 
@@ -90,8 +90,7 @@
 
         <fieldset>
             <legend>What Type Of User Are You? (One or more)</legend>
-            <select id="userType" multiple>
-                <option value="">Select</option>
+            <select id="userType" name="userType" multiple>
                 <option value="user">User</option>
                 <option value="moderator">Moderator</option>
                 <option value="administrator">Administrator</option>
@@ -102,7 +101,7 @@
             <legend>How Spicy Do You Like Your Memes?</legend>
             <label for="spiciness">Spiciness</label>
             <br>
-            <input type="range" list="spiciness">
+            <input type="range" list="spiciness" name="spiciness">
             <datalist id="spiciness">
                 <option value="0" label="0%">
                 <option value="10">
@@ -117,7 +116,7 @@
                 <option value="100" label="100%">
             </datalist>
         </fieldset>
-        <button type="submit">Create User</button>
+        <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
     <script src="index.js"></script>

@@ -10,7 +10,7 @@ app.use(express.static(publicFolderPath))
 const users = []
 function checkIfUserAlreadyExists(req) {
     for (i = 0; i < users.length; i++) {
-        if(users[i].userName.includes(req.body.userName)) {
+        if(users[i].Name.includes(req.body.Name)) {
             return true
         } else {
             return false
@@ -35,6 +35,7 @@ app.post("/api/user", function(req,res) {
     } else {
     req.body.id = randomId()
     users.push(req.body)
+    console.log(users)
     res.status(201)
     res.send(req.body)
     }

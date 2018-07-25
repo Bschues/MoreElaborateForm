@@ -8,10 +8,14 @@ userCreateForm.addEventListener("submit",submitUserCreate)
 function submitUserCreate(event) {
     event.preventDefault()
     User = {
-        userName: document.getElementById("newUserName").value,
-        email: userCreateForm.email.value,
-        password: userCreateForm.password.value,
-        newPassword: userCreateForm.newPassword.value
+        Name: userCreateForm.userName.value,
+        Email: userCreateForm.emailAddress.value,
+        Phone: userCreateForm.phone.value,
+        SocialMedia: userCreateForm.url.value,
+        CommunicationMethod: userCreateForm.comMethod.value,
+        UsedDevices: userCreateForm.device.value,
+        UserType: userCreateForm.userType.value,
+        MemeSpicinessLevel: userCreateForm.spiciness.value
     }
     fetch("/api/user", {
             method: "POST",
